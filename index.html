@@ -1,21 +1,79 @@
-<html>
-<head>
-<title>E-gousala</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="assets/style/w3.css">
-<link rel="stylesheet" type="text/css" href="assets/style/extrn.css">
-<link rel="stylesheet" href="assets/style/fa.css">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-</head>
-<body>
-	<div>
-		<div class="w3-teal sizeH"><p class="fontsA">e-gousala</p></div>
-		<footer class="w3-blue sizeF"><i class="fa fa-home" aria-hidden="true"></i></footer>
-		<h1>hello</h1>
-	</div>
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<title>E-gousala</title>
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<link rel="stylesheet" type="text/css" href="assets/style/w3.css">
+					<link rel="stylesheet" type="text/css" href="assets/style/extrn.css">
+					<script src="assets/script/jquery.js"></script>
+					<script src="assets/script/loadA.js"></script>
+					<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+				</head>
+				<body>
+					<div>
+						<div class="w3-teal w3-card-4 sizeH"><p class="fontsA">e-gousala</p></div>
+						<!-- slider -->
+						<div  class="w3-content w3-display-container">
 
+							<div class="w3-display-container mySlides">
+								<img src="cow1.jpg" style="width:100%">
+							</div>
 
-	<div>
-	</div>
-</body>
-</html>
+							<div class="w3-display-container mySlides">
+								<img src="cow2.jpg" style="width:100%">
+
+							</div>
+
+							<div class="w3-display-container mySlides">
+								<img src="cow3.jpg" style="width:100%">
+							</div>
+
+							<div class="w3-display-container mySlides">
+								<img src="cow4.jpg" style="width:100%">
+							</div>
+
+							<div class="w3-display-container mySlides">
+								<img src="cow5.jpg" style="width:100%">
+
+							</div>
+
+							<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+						</div>
+						
+						<footer class="w3-blue sizeF">
+							<div class="footerdiv"	>
+								<button class="w3-button"><i class="fa fa-home"style="font-size:35px"></i></button>
+								<button class="w3-button"><i class="fa fa-envelope" style="font-size:35px"></i></button>
+								<button class="w3-button"><i class="fa fa-search" style="font-size:35px"></i></button>
+								<button class="w3-button"><i class="fa fa-medkit" style="font-size:35px"></i></button>
+								<button class="w3-button"><i class="fa fa-handshake-o" style="font-size:35px"></i></button>
+							</div>
+						</footer>
+					</div>
+						</body>
+					<script>
+					var slideIndex = 1;
+					showDivs(slideIndex);
+
+					function plusDivs(n) {
+						showDivs(slideIndex += n);
+					}
+
+					function showDivs(n) {
+						var i;
+						var x = document.getElementsByClassName("mySlides");
+						console.log(x);
+						if (n > x.length) {slideIndex = 1}    
+							if (n < 1) {slideIndex = x.length}
+								for (i = 0; i < x.length; i++) {
+									x[i].style.display = "none";  
+								}
+								x[slideIndex-1].style.display = "block";  
+							}
+						
+						</script>
+					
+						</html>
